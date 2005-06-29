@@ -1,11 +1,6 @@
-lib/Class/Class.pm
-t/01load.t
-t/02simple.t
-t/03complex.t
-t/04polymorph.t
-t/05polyvolve.t
-ChangeLog
-MANIFEST
+Changes
+Class.pm
 Makefile.PL
+MANIFEST
 README
-TODO
+t/1.t

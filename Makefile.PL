@@ -1,12 +1,12 @@
-require 5.005;
-use strict;
-
+use 5.006;
 use ExtUtils::MakeMaker;
-
-WriteMakefile
-  (AUTHOR => 'B. K. Oxley (binkley) at Home <binkley@bigfoot.com>',
-   ABSTRACT => 'Class-oriented replacement for Class::Struct',
-   PREREQ_PM => {'Class::ISA' => 0,
-                 Pragmatic => 0},
-   NAME => 'Class::Class',
-   VERSION_FROM => 'lib/Class/Class.pm');
+# See lib/ExtUtils/MakeMaker.pm for details of how to influence
+# the contents of the Makefile that is written.
+WriteMakefile(
+    'NAME'		=> 'Class::Class',
+    'VERSION_FROM'	=> 'Class.pm', # finds $VERSION
+    'PREREQ_PM'		=> {}, # e.g., Module::Name => 1.1
+    ($] >= 5.005 ?    ## Add these new keywords supported since 5.005
+      (ABSTRACT_FROM => 'Class.pm', # retrieve abstract from module
+       AUTHOR     => 'Denys Vorobyov <denysv@primus.ca>') : ()),
+);
